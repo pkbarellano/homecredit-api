@@ -31,7 +31,7 @@ class MY_Model extends CI_Model
             return true;
         } else {
 
-            $this->$db->trans_commit();
+            $this->$db->trans_rollback();
 
             return false;
         }
